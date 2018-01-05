@@ -23,6 +23,9 @@ class Person(object):
                 file.writelines("")
 
     def add_idea(self, idea):
+        if idea == "":
+            print("Invalid input")
+            return
         for item in self.ideas:
             if item == idea:
                 print("Sorry, that's already been added!")
@@ -45,7 +48,8 @@ class Person(object):
 
     def list_all(self):
         for idea in self.ideas:
-            print('"' + idea + '"')
+            if idea != "":
+                print('"' + idea + '"')
 
 while True:
     print("Enter a person's name!")
