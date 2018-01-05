@@ -33,3 +33,11 @@ def is_palindrome(string):
             return False
         place += 1
     return True
+
+def count_words(string):
+    string = string.split()
+    count = 0
+    for word in string:
+        count += 1
+
+    return count
